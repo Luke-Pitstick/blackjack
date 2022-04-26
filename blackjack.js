@@ -38,7 +38,7 @@ roll.addEventListener('click', () => {
         
         if (playercount === 21){
             count = 10;
-            wonlost.textContent = `You Won ${playercount} to ${dealercount} reload to play again`;
+            wonlost.textContent = `You Won ${playercount} to ${dealercount}`;
         }
 
 
@@ -53,7 +53,7 @@ roll.addEventListener('click', () => {
         
         if (playercount > 21){
             count = 10;
-            wonlost.textContent =`Dealer Won ${dealercount} to ${playercount} click ok to play again`;
+            wonlost.textContent =`Dealer Won ${dealercount} to ${playercount}`;
             
         }
         
@@ -74,12 +74,12 @@ stop.addEventListener('click', () => {
 
         if (dealercount > playercount && dealercount < 22){
             count = 10;
-            wonlost.textContent =`Dealer Won ${dealercount} to ${playercount} reload to play again`;
+            wonlost.textContent =`Dealer Won ${dealercount} to ${playercount}`;
             
         }
         else {
             count = 10;
-            wonlost.textContent = `You Won ${playercount} to ${dealercount} reload to play again`;
+            wonlost.textContent = `You Won ${playercount} to ${dealercount}`;
             
         }
     }    
