@@ -13,7 +13,6 @@ function getCardValue () {
 
 const cards = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
 
-console.log(cards.length)
 
 
 const roll = document.querySelector('#hit')
@@ -32,10 +31,8 @@ play.addEventListener('click', () => {
     if (count === 0 && count !== 10){
         
         for (let i = 0; i < 2; i++){
-            playercount = getCardValue();
+            playercount += getCardValue();
             dealercount += getCardValue();
-            console.log(cards);
-            console.log(cards.length)
         }
 
         playerCountOutput.textContent = "" + playercount;
