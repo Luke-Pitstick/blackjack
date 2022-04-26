@@ -2,6 +2,20 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
 
+function getCardValue () {
+    const index = getRndInteger(0, cards.length);
+    const output = cards[index];
+    cards.splice(index, 1);
+    return output;
+
+}
+
+
+const cards = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+
+console.log(cards.length)
+
+
 const roll = document.querySelector('#hit')
 const stop = document.querySelector('#stand')
 const wonlost = document.querySelector('#wonlost');
@@ -18,9 +32,10 @@ play.addEventListener('click', () => {
     if (count === 0 && count !== 10){
         
         for (let i = 0; i < 2; i++){
-            playercount += getRndInteger(1, 11)
-            console.log(playercount);
-            dealercount += getRndInteger(1, 11)
+            playercount = getCardValue();
+            dealercount += getCardValue();
+            console.log(cards);
+            console.log(cards.length)
         }
 
         playerCountOutput.textContent = "" + playercount;
@@ -33,8 +48,9 @@ play.addEventListener('click', () => {
 
 roll.addEventListener('click', () => {
     if (count !== 0 && count !== 10){
-        playercount += getRndInteger(1, 11);
+        playercount += getCardValue();
         playerCountOutput.textContent = "" + playercount;
+
         
         if (playercount === 21){
             count = 10;
@@ -43,7 +59,7 @@ roll.addEventListener('click', () => {
 
 
         if (dealercount < 17){
-            dealercount += getRndInteger(1, 11);
+            dealercount += getCardValue();
             dealerCountOutput.textContent = "" + dealercount;
         }
         else if (dealercount > 16){
@@ -63,7 +79,7 @@ roll.addEventListener('click', () => {
 stop.addEventListener('click', () => {    
     if (count !== 0 && count !== 10){
         if (dealercount < 17){
-            dealercount += getRndInteger(1, 11);
+            dealercount += getCardValue();
             dealerCountOutput.textContent = "" + dealercount;
         }
         else if (dealercount > 16){
