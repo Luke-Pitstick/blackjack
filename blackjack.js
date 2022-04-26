@@ -31,7 +31,7 @@ play.addEventListener('click', () => {
     if (count === 0 && count !== 10){
         
         for (let i = 0; i < 2; i++){
-            playercount += getCardValue();
+            playercount += getCardValue();c
             dealercount += getCardValue();
         }
 
@@ -69,8 +69,6 @@ roll.addEventListener('click', () => {
             wonlost.textContent =`Dealer Won ${dealercount} to ${playercount}`;
             
         }
-        
-        play++;
     }
 })
 stop.addEventListener('click', () => {    
