@@ -6,7 +6,13 @@ body {
 }
 
 * {
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+}
+
+
+#wonlost, .counts * {
+    color: rgb(153, 190, 153);
 }
 
 
@@ -14,16 +20,18 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 1vw;
+  gap: 1.5vw;
 }
 
 .counts {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 1vw;
+  gap: 0vw 2vw;
   flex: 1;
 }
+
+
 
 .blackjack {
   display: flex;
@@ -33,6 +41,7 @@ body {
 
 .count {
   text-align: center;
+  margin-bottom: 2em;
 }
 
 #blackjack-title {
@@ -41,7 +50,7 @@ body {
 
 .game {
     width: 50%;
-    background-color: rgb(6, 6, 66);
+    background-color: rgb(9, 9, 55);
     color: white;
     padding: 10vh 0vh 16vh;
     height: 100%;
@@ -57,7 +66,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 5vh 0;
+    margin: 10vh 0 0 ;
 
 }
 
@@ -82,3 +91,4 @@ body {
     border-radius: 5px;
     color: rgb(6, 6, 66);
 }
+
