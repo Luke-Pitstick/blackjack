@@ -1,0 +1,84 @@
+
+body {
+    border: 0;
+    margin: 0;
+    background: rgb(153, 190, 153);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1vw;
+}
+
+.counts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1vw;
+  flex: 1;
+}
+
+.blackjack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.count {
+  text-align: center;
+}
+
+#blackjack-title {
+    text-align: center;
+}
+
+.game {
+    width: 50%;
+    background-color: rgb(6, 6, 66);
+    color: white;
+    padding: 10vh 0vh 16vh;
+    height: 100%;
+    height: auto;
+    flex: 1 1 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    
+}
+
+.background {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 0;
+
+}
+
+.header {
+    text-align: center;
+    background-color: rgb(116, 145, 116);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+
+}
+
+.header h1 {
+    margin: 0;
+    padding: 2vh 0;
+    color:rgb(6, 6, 66); 
+    
+}
+
+.buttons button {
+    border: 1px solid rgb(116, 145, 116);
+    background-color: rgb(116, 145, 116);
+    border-radius: 5px;
+    color: rgb(6, 6, 66);
+}

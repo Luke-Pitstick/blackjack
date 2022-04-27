@@ -5,59 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luke's Blackjack Game</title>
-    <style>
-         .buttons {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            gap: 1vw;
-        }
-
-        .counts {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            gap: 1vw;
-        }
-        
-        .blackjack {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .count{
-            text-align: center;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 </head>
 <body>
-<h1 style="text-align: center;">Blackjack</h1>
-<div class="blackjack">
-    <h2 id="wonlost"></h2>
-    <div class="counts">
-        <div>
-            <h2>Your Amount</h2>
-            <h3 class="count" id="playercount">0</h3>
-        </div>
-        <div>
-            <h2>Dealer Amount</h2>
-            <h3 class="count" id="dealercount">0</h3>
-        </div>
-    </div>
-    <div class="buttons">
-        <button id="play">Play</button>
-        <button id="hit">Hit</button>
-        <button id="stand">Stand</button>
-        <button id="reset">Reset</button>
+<div class="header">
+    <h1>LUKE'S BLACKJACK GAME</h1>
+</div>
 
+
+<div class="background"> 
+    <div class="game">
+        <div class="blackjack">
+            <h2 id="wonlost"></h2>
+            <div class="counts">
+                <div>
+                    <h2>Your Amount</h2>
+                    <h3 class="count" id="playercount">0</h3>
+                </div>
+                <div>
+                    <h2>Dealer Amount</h2>
+                    <h3 class="count" id="dealercount">0</h3>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="play">Play</button>
+                <button id="hit">Hit</button>
+                <button id="stand">Stand</button>
+                <button id="reset">Reset</button>
+
+            </div>
+        </div>
     </div>
 </div>
 
-<script src="blackjack.js"></script>
+
+</div>
+
+<script src="./js/blackjack.js"></script>
     
 </body>
 </html>
