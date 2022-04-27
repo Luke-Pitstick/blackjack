@@ -15,13 +15,13 @@ const cards = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6,
 
 
 
-const roll = document.querySelector('#hit')
-const stop = document.querySelector('#stand')
+const roll = document.querySelector('#hit');
+const stop = document.querySelector('#stand');
 const wonlost = document.querySelector('#wonlost');
-const play = document.querySelector('#play')
+const play = document.querySelector('#play');
 
-const playerCountOutput = document.querySelector('#playercount')
-const dealerCountOutput = document.querySelector('#dealercount')
+const playerCountOutput = document.querySelector('#playercount');
+const dealerCountOutput = document.querySelector('#dealercount');
 
 let playercount = 0;
 let dealercount = 0;
@@ -31,9 +31,9 @@ play.addEventListener('click', () => {
     if (count === 0 && count !== 10){
         
         for (let i = 0; i < 2; i++){
-            playercount += getCardValue();c
-            dealercount += getCardValue();
+            playercount += getCardValue();
         }
+        dealercount += getCardValue();
 
         playerCountOutput.textContent = "" + playercount;
         dealerCountOutput.textContent = "" + dealercount;
@@ -48,22 +48,6 @@ roll.addEventListener('click', () => {
         playercount += getCardValue();
         playerCountOutput.textContent = "" + playercount;
 
-        
-        if (playercount === 21){
-            count = 10;
-            wonlost.textContent = `You Won ${playercount} to ${dealercount}`;
-        }
-
-
-        if (dealercount < 17){
-            dealercount += getCardValue();
-            dealerCountOutput.textContent = "" + dealercount;
-        }
-        else if (dealercount > 16){
-            dealercount = dealercount;
-            dealerCountOutput.textContent = "" + dealercount;
-        }
-        
         if (playercount > 21){
             count = 10;
             wonlost.textContent =`Dealer Won ${dealercount} to ${playercount}`;
@@ -73,8 +57,11 @@ roll.addEventListener('click', () => {
 })
 stop.addEventListener('click', () => {    
     if (count !== 0 && count !== 10){
+
         if (dealercount < 17){
-            dealercount += getCardValue();
+            while (dealercount < 17){
+                dealercount += getCardValue();
+            }
             dealerCountOutput.textContent = "" + dealercount;
         }
         else if (dealercount > 16){
@@ -83,7 +70,22 @@ stop.addEventListener('click', () => {
         }
 
 
-        if (dealercount > playercount && dealercount < 22){
+        if (playercount === 21){
+            count = 10;
+            wonlost.textContent = `You Won ${playercount} to ${dealercount}`;
+        }
+        
+        else if (dealercount === 21){
+            count = 10;
+            wonlost.textContent =`Dealer Won ${dealercount} to ${playercount}`;
+        }
+        
+        else if (dealercount === playercount){
+            count = 10;
+            wonlost.textContent = `You Tied ${playercount} to ${dealercount}`;
+        }
+
+        else if (dealercount > playercount && dealercount < 22){
             count = 10;
             wonlost.textContent =`Dealer Won ${dealercount} to ${playercount}`;
             
