@@ -82,12 +82,13 @@ body {
     margin: 0;
     padding: 3vh 0;
     color:rgb(6, 6, 66); 
-    
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
 .buttons button {
     border: 1px solid rgb(116, 145, 116);
-    background-color: rgb(116, 145, 116);
+    background-color: rgb(153, 190, 153);
     border-radius: 5px;
     color: rgb(6, 6, 66);
 }
