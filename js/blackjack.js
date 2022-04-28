@@ -51,7 +51,11 @@ roll.addEventListener('click', () => {
         if (playercount > 21){
             count = 10;
             wonlost.textContent =`Dealer Won ${dealercount} to ${playercount}`;
-            
+        
+        }
+        else if (playercount == 21) {
+            count = 10;
+            wonlost.textContent = `You Won ${playercount} to ${dealercount}`;
         }
     }
 })
