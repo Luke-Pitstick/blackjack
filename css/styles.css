@@ -1,8 +1,19 @@
+:root {
+    --gold: #b8860b;
+    --purple: #8b08c4;
+    --header-purple: #6f0d99;
+
+}
+
+
+
+
+
 
 body {
     border: 0;
     margin: 0;
-    background: rgb(153, 190, 153);
+    background: var(--purple);
 }
 
 * {
@@ -12,7 +23,7 @@ body {
 
 
 #wonlost, .counts * {
-    color: rgb(153, 190, 153);
+    color: var(--purple);
 }
 
 
@@ -50,7 +61,7 @@ body {
 
 .game {
     width: 50%;
-    background-color: rgb(9, 9, 55);
+    background-color: var(--gold);
     color: white;
     padding: 10vh 0vh 16vh;
     height: 100%;
@@ -72,7 +83,7 @@ body {
 
 .header {
     text-align: center;
-    background-color: rgb(116, 145, 116);
+    background-color: var(--header-purple);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
 
@@ -81,15 +92,15 @@ body {
 .header h1 {
     margin: 0;
     padding: 3vh 0;
-    color:rgb(6, 6, 66); 
+    color: var(--gold); 
     font-size: 2.5em;
     font-weight: bold;
 }
 
 .buttons button {
-    border: 1px solid rgb(116, 145, 116);
-    background-color: rgb(153, 190, 153);
+    border: 1px solid var(--header-purple);
+    background-color: var(--purple);
     border-radius: 5px;
-    color: rgb(6, 6, 66);
+    color: var(--gold);
 }
 
